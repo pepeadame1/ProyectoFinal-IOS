@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268740BF2451719400D9AB38 /* ViewControllerMedir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268740BE2451719400D9AB38 /* ViewControllerMedir.swift */; };
+		268740C124519F2400D9AB38 /* Medicion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268740C024519F2400D9AB38 /* Medicion.swift */; };
 		26EEE3E7244677DB009FA9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEE3E6244677DB009FA9E4 /* AppDelegate.swift */; };
 		26EEE3E9244677DB009FA9E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEE3E8244677DB009FA9E4 /* SceneDelegate.swift */; };
 		26EEE3EB244677DB009FA9E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEE3EA244677DB009FA9E4 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		268740BE2451719400D9AB38 /* ViewControllerMedir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMedir.swift; sourceTree = "<group>"; };
+		268740C024519F2400D9AB38 /* Medicion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010Medicion.swift"; sourceTree = "<group>"; };
 		26EEE3E3244677DB009FA9E4 /* proyectoFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26EEE3E6244677DB009FA9E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26EEE3E8244677DB009FA9E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				26EEE3F1244677DD009FA9E4 /* LaunchScreen.storyboard */,
 				26EEE3F4244677DD009FA9E4 /* Info.plist */,
 				26EEE3FA24467AC0009FA9E4 /* todo.rtf */,
+				268740BE2451719400D9AB38 /* ViewControllerMedir.swift */,
+				268740C024519F2400D9AB38 /* Medicion.swift */,
 			);
 			path = proyectoFinal;
 			sourceTree = "<group>";
@@ -165,9 +171,11 @@
 				BD7A526F245137EB0040392B /* EditarPerfilViewController.swift in Sources */,
 				26EEE3E7244677DB009FA9E4 /* AppDelegate.swift in Sources */,
 				BD7A527124513D740040392B /* TabBarViewController.swift in Sources */,
+				268740C124519F2400D9AB38 /* Medicion.swift in Sources */,
 				BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */,
 				BD7A52652450B81E0040392B /* Paciente.swift in Sources */,
 				BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */,
+				268740BF2451719400D9AB38 /* ViewControllerMedir.swift in Sources */,
 				26EEE3E9244677DB009FA9E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,7 @@ class Paciente: NSObject {
     var Altura : Float
     var Edad : Int
     var circAb : Float
+    var Mediciones : [Medicion] = []
     
     //var Medicinas = [String]()
     
@@ -26,5 +27,10 @@ class Paciente: NSObject {
         /*for Medicinas in Medicinas{
             self.Medicinas.append(Medicinas)
         }*/
+    }
+    
+    func agregarMedicion(sis:[Int],dia:[Int],fc:[Int]){
+        let medicion = Medicion(sis:sis,dia:dia,fc:fc)
+        Mediciones.append(medicion)
     }
 }
