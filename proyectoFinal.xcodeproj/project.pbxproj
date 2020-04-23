@@ -14,6 +14,10 @@
 		26EEE3F0244677DD009FA9E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26EEE3EF244677DD009FA9E4 /* Assets.xcassets */; };
 		26EEE3F3244677DD009FA9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26EEE3F1244677DD009FA9E4 /* LaunchScreen.storyboard */; };
 		26EEE3FB24467AC0009FA9E4 /* todo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 26EEE3FA24467AC0009FA9E4 /* todo.rtf */; };
+		BD7A52652450B81E0040392B /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A52642450B81E0040392B /* Paciente.swift */; };
+		BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A52682450E24D0040392B /* InicioViewController.swift */; };
+		BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */; };
+		BD7A526D245105820040392B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A526C245105820040392B /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		26EEE3F2244677DD009FA9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26EEE3F4244677DD009FA9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26EEE3FA24467AC0009FA9E4 /* todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = todo.rtf; sourceTree = "<group>"; };
+		BD7A52642450B81E0040392B /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
+		BD7A52682450E24D0040392B /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
+		BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarMedicinasViewController.swift; sourceTree = "<group>"; };
+		BD7A526C245105820040392B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,10 @@
 				26EEE3E8244677DB009FA9E4 /* SceneDelegate.swift */,
 				26EEE3EA244677DB009FA9E4 /* ViewController.swift */,
 				26EEE3EC244677DB009FA9E4 /* Main.storyboard */,
+				BD7A526C245105820040392B /* MainViewController.swift */,
+				BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */,
+				BD7A52682450E24D0040392B /* InicioViewController.swift */,
+				BD7A52642450B81E0040392B /* Paciente.swift */,
 				26EEE3EF244677DD009FA9E4 /* Assets.xcassets */,
 				26EEE3F1244677DD009FA9E4 /* LaunchScreen.storyboard */,
 				26EEE3F4244677DD009FA9E4 /* Info.plist */,
@@ -142,8 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7A526D245105820040392B /* MainViewController.swift in Sources */,
 				26EEE3EB244677DB009FA9E4 /* ViewController.swift in Sources */,
 				26EEE3E7244677DB009FA9E4 /* AppDelegate.swift in Sources */,
+				BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */,
+				BD7A52652450B81E0040392B /* Paciente.swift in Sources */,
+				BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */,
 				26EEE3E9244677DB009FA9E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
