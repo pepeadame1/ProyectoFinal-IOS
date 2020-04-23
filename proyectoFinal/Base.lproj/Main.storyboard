@@ -169,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8T-v9-wl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3015.1999999999998" y="1415.4422788605698"/>
+            <point key="canvasLocation" x="-3590" y="1416"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="73Z-IJ-Gg6">
@@ -234,7 +234,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="icX-8B-evp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-contacts-50" id="Xeu-O2-RXT"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-home-50" id="Xeu-O2-RXT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjM-zk-k8I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,7 +254,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93O-Re-mhU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2312.8000000000002" y="1416.3418290854574"/>
+            <point key="canvasLocation" x="-2679" y="1427"/>
+        </scene>
+        <!--Editar Perfil View Controller-->
+        <scene sceneID="zjE-Bz-FEV">
+            <objects>
+                <viewController id="Sl5-z6-bXb" customClass="EditarPerfilViewController" customModule="proyectoFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvB-Ky-GsU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Peso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC7-Bb-zbV">
+                                <rect key="frame" x="59" y="203" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Altura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHG-sm-ZRX">
+                                <rect key="frame" x="59" y="252" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Circunferencia Abdominal" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnK-8m-4Tg">
+                                <rect key="frame" x="59" y="355" width="116" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PgM-Op-yJL">
+                                <rect key="frame" x="183" y="368" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-Tz-Vpa">
+                                <rect key="frame" x="160" y="245" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dl9-9s-Gfk">
+                                <rect key="frame" x="160" y="197" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zr1-Pz-R9M">
+                                <rect key="frame" x="160" y="303" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7y-F9-NeF">
+                                <rect key="frame" x="59" y="310" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDg-g5-Xdg">
+                                <rect key="frame" x="159" y="462" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="GuardarNewInfo:" destination="Sl5-z6-bXb" eventType="touchUpInside" id="KgI-Tk-qXf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ghx-uF-72O"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-contacts-50" id="tQP-ag-LaC"/>
+                    <navigationItem key="navigationItem" id="Y9B-f7-2IE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tfAltura" destination="X9V-Tz-Vpa" id="3OH-3u-jNW"/>
+                        <outlet property="tfCirc" destination="PgM-Op-yJL" id="iT2-ye-Qx8"/>
+                        <outlet property="tfEdad" destination="Zr1-Pz-R9M" id="Jxm-01-5Io"/>
+                        <outlet property="tfPeso" destination="Dl9-9s-Gfk" id="o1V-0I-c6I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qah-ai-e4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1780" y="1415"/>
         </scene>
         <!--Inicio View Controller-->
         <scene sceneID="ACS-rj-l2d">
@@ -382,10 +468,10 @@
             </objects>
             <point key="canvasLocation" x="3288.8000000000002" y="-522.18890554722645"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="O3M-CH-R1A">
             <objects>
-                <tabBarController id="WeB-WD-MXw" sceneMemberID="viewController">
+                <tabBarController id="WeB-WD-MXw" customClass="TabBarViewController" customModule="proyectoFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dba-eP-byb"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IG4-ZS-gLy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -394,6 +480,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="CmH-Uf-mQm" kind="relationship" relationship="viewControllers" id="W4v-pQ-eCd"/>
+                        <segue destination="Sl5-z6-bXb" kind="relationship" relationship="viewControllers" id="23w-14-Xfg"/>
                         <segue destination="QXH-al-wtJ" kind="relationship" relationship="viewControllers" id="YZx-8P-17t"/>
                         <segue destination="kdY-Ki-h8p" kind="relationship" relationship="viewControllers" id="PuM-9v-5jm"/>
                     </connections>
@@ -477,6 +564,7 @@
     <resources>
         <image name="icons8-contacts-50" width="50" height="50"/>
         <image name="icons8-health-graph-50" width="50" height="50"/>
+        <image name="icons8-home-50" width="50" height="50"/>
         <image name="icons8-settings-50" width="50" height="50"/>
         <image name="loading1" width="200" height="200"/>
         <image name="loading2" width="200" height="200"/>

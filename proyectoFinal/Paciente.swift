@@ -14,6 +14,7 @@ class Paciente: NSObject {
     var Altura : Float
     var Edad : Int
     var circAb : Float
+    
     //var Medicinas = [String]()
     
     init(Nombre:String,Peso:Float,Altura:Float,Edad:Int,circAb:Float){

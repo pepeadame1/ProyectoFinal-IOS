@@ -18,6 +18,8 @@
 		BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A52682450E24D0040392B /* InicioViewController.swift */; };
 		BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */; };
 		BD7A526D245105820040392B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A526C245105820040392B /* MainViewController.swift */; };
+		BD7A526F245137EB0040392B /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A526E245137EB0040392B /* EditarPerfilViewController.swift */; };
+		BD7A527124513D740040392B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A527024513D740040392B /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		BD7A52682450E24D0040392B /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarMedicinasViewController.swift; sourceTree = "<group>"; };
 		BD7A526C245105820040392B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BD7A526E245137EB0040392B /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
+		BD7A527024513D740040392B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				26EEE3E8244677DB009FA9E4 /* SceneDelegate.swift */,
 				26EEE3EA244677DB009FA9E4 /* ViewController.swift */,
 				26EEE3EC244677DB009FA9E4 /* Main.storyboard */,
+				BD7A527024513D740040392B /* TabBarViewController.swift */,
+				BD7A526E245137EB0040392B /* EditarPerfilViewController.swift */,
 				BD7A526C245105820040392B /* MainViewController.swift */,
 				BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */,
 				BD7A52682450E24D0040392B /* InicioViewController.swift */,
@@ -156,7 +162,9 @@
 			files = (
 				BD7A526D245105820040392B /* MainViewController.swift in Sources */,
 				26EEE3EB244677DB009FA9E4 /* ViewController.swift in Sources */,
+				BD7A526F245137EB0040392B /* EditarPerfilViewController.swift in Sources */,
 				26EEE3E7244677DB009FA9E4 /* AppDelegate.swift in Sources */,
+				BD7A527124513D740040392B /* TabBarViewController.swift in Sources */,
 				BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */,
 				BD7A52652450B81E0040392B /* Paciente.swift in Sources */,
 				BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */,

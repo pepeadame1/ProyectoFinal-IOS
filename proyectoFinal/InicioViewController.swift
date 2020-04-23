@@ -27,10 +27,8 @@ class InicioViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let bar = segue.destination as! UITabBarController
-        let nav = bar.viewControllers![0] as! UIViewController
-        let vc = nav as! MainViewController
-        vc.paciente = pacienteUsuario[0]
+        let bar = segue.destination as! TabBarViewController
+        bar.paciente = pacienteUsuario[0]
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
