@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController, ContainerToMaster {
     
@@ -141,7 +142,9 @@ class ViewController: UIViewController, ContainerToMaster {
         case 6:
             fun2()
         case 9:
-            let medicion = Medicion(sis: med1,dia: med2,fc: med3)
+            let medicion = Medicion(sis: med1,dia: med2,fc: med3, siguioMedicamentos: true)
+            medicion.mandarMedicion()
+            
             //TODO: cerrer
             print("cerrar vista")
         default:
@@ -204,15 +207,15 @@ class ViewController: UIViewController, ContainerToMaster {
         switch stateMachine {
         case 2:
             med1.append(uno)
-            med1.append(dos)
-            med1.append(tres)
-        case 5:
-            med2.append(uno)
             med2.append(dos)
-            med2.append(tres)
+            med3.append(tres)
+        case 5:
+            med1.append(uno)
+            med2.append(dos)
+            med3.append(tres)
         case 8:
-            med3.append(uno)
-            med3.append(dos)
+            med1.append(uno)
+            med2.append(dos)
             med3.append(tres)
         default:
             lbCounter.text = "ERROR"

@@ -30,7 +30,7 @@ class Paciente: NSObject {
     }
     
     func agregarMedicion(sis:[Int],dia:[Int],fc:[Int]){
-        let medicion = Medicion(sis:sis,dia:dia,fc:fc)
+        let medicion = Medicion(sis:sis,dia:dia,fc:fc,siguioMedicamentos: true)
         Mediciones.append(medicion)
     }
 }
