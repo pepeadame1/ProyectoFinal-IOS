@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct defaultsKeys {
+    static let keyOne = "firstStringKey"
+    static let keyTwo = "secondStringKey"
+}
 
 class InicioViewController: UIViewController{
     
@@ -35,7 +39,14 @@ class InicioViewController: UIViewController{
         
         
         if let nombre = tfNombre.text,let edad = Int(tfEdad.text!), let peso = Float(tfPeso.text!), let altura = Float(tfAltura.text!), let circAb = Float(tfCircAb.text!){
-            let paciente = Paciente(Nombre: nombre, Peso: peso, Altura: altura, Edad: edad, circAb: circAb)
+            
+            let id = "test"
+            
+            let paciente = Paciente(id:id,Nombre: nombre, Peso: peso, Altura: altura, Edad: edad, circAb: circAb,telefono: 666,correo:"huajuco4@gmail.com")
+            paciente.agregarUsuario()
+            
+            
+            
             pacienteUsuario.append(paciente)
                 return true
             }

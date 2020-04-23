@@ -7,30 +7,114 @@
 //
 
 import UIKit
+import Firebase
 
 class Paciente: NSObject {
+    var id : String
     var Nombre : String
     var Peso : Float
     var Altura : Float
     var Edad : Int
     var circAb : Float
     var Mediciones : [Medicion] = []
-    
+    var telefono : Int
+    var correo : String
     //var Medicinas = [String]()
     
-    init(Nombre:String,Peso:Float,Altura:Float,Edad:Int,circAb:Float){
+    init(id:String,Nombre:String,Peso:Float,Altura:Float,Edad:Int,circAb:Float,telefono:Int,correo:String){
+        self.id = id
         self.Nombre = Nombre
         self.Peso = Peso
         self.Altura = Altura
         self.Edad = Edad
         self.circAb = circAb
+        self.telefono = telefono
+        self.correo = correo
         /*for Medicinas in Medicinas{
             self.Medicinas.append(Medicinas)
         }*/
     }
     
-    func agregarMedicion(sis:[Int],dia:[Int],fc:[Int]){
+    func agregarMedicion(sis:[Int],dia:[Int],fc:[Int],siguioMedicamentos:Bool){
         let medicion = Medicion(sis:sis,dia:dia,fc:fc,siguioMedicamentos: true)
+        medicion.mandarMedicion()
         Mediciones.append(medicion)
     }
+    
+    func agregarUsuario(){
+        var ref: DocumentReference? = nil
+        let db = Firestore.firestore()
+        ref = db.collection("users").addDocument(data:[
+            "id":ref?.documentID,
+            "nombre":Nombre,
+            "peso":Peso,
+            "altura":Altura,
+            "edad":Edad,
+            "circAb":circAb,
+            "telefono" : telefono,
+            "correo" : correo
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                self.id = ref!.documentID
+                let defaults = UserDefaults.standard
+                defaults.set(self.id,forKey: defaultsKeys.keyOne)
+                print(self.id)
+                self.agregarId()
+            }
+        }
+        
+        
+    }
+    
+    func agregarId(){
+        
+        var idX : String
+        
+        let defaults = UserDefaults.standard
+        if let stringOne = defaults.string(forKey: defaultsKeys.keyOne) {
+            print(stringOne) // Some String Value
+            idX = stringOne
+            let db = Firestore.firestore()
+            db.collection("users").document(idX).setData([
+                "id":idX
+            ],merge: true) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    self.id = idX
+                    print(self.id)
+                    self.agregarMediciones()
+                }
+            }
+        }
+        
+    }
+    
+    func agregarMediciones(){
+        var idX:String
+        let defaults = UserDefaults.standard
+        if let stringOne = defaults.string(forKey: defaultsKeys.keyOne) {
+            print(stringOne) // Some String Value
+            idX = stringOne
+            let db = Firestore.firestore()
+            db.collection("users").document(idX).collection("Mediciones").addDocument(data: [
+                "sis" : [],
+                "dia" : [],
+                "fc" : [],
+                "timestamp" : Timestamp.init(),
+                "esValida" : false,
+                "siguioMedicamentos" : true
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+        }
+        
+    }
+    
 }
