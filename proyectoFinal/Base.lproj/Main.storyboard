@@ -357,6 +357,41 @@
             </objects>
             <point key="canvasLocation" x="-1780" y="1415"/>
         </scene>
+        <!--View Controller Qr-->
+        <scene sceneID="NMn-Zv-Llj">
+            <objects>
+                <viewController id="kSg-Cu-Um5" customClass="ViewControllerQr" customModule="proyectoFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ttx-aJ-alu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-fu-uGS">
+                                <rect key="frame" x="67" y="371" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2W-kJ-6Fd">
+                                        <rect key="frame" x="99" y="54" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZHM-nd-Mda"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbOutput" destination="r2W-kJ-6Fd" id="jpn-Ho-0xS"/>
+                        <outlet property="previewView" destination="yoi-fu-uGS" id="Q4Z-JU-sdd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IT5-Vy-rb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4958" y="745"/>
+        </scene>
         <!--Inicio View Controller-->
         <scene sceneID="ACS-rj-l2d">
             <objects>
@@ -435,7 +470,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Guardar"/>
                                 <connections>
-                                    <segue destination="WeB-WD-MXw" kind="presentation" modalPresentationStyle="fullScreen" id="Idw-cF-Rkm"/>
+                                    <segue destination="WeB-WD-MXw" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="Idw-cF-Rkm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -634,6 +669,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eHC-Xd-Pay"/>
                     </view>
                     <connections>
                         <outlet property="tfAst" destination="YCK-5m-WiC" id="nss-po-zIH"/>

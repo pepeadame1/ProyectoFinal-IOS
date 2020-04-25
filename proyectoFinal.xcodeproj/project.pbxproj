@@ -11,6 +11,8 @@
 		262EFCEE2451DE7200D24FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262EFCED2451DE7200D24FAD /* GoogleService-Info.plist */; };
 		268740BF2451719400D9AB38 /* ViewControllerMedir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268740BE2451719400D9AB38 /* ViewControllerMedir.swift */; };
 		268740C124519F2400D9AB38 /* Medicion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268740C024519F2400D9AB38 /* Medicion.swift */; };
+		26BA2DC62453BD9F00CE0CB1 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA2DC52453BD9F00CE0CB1 /* Doctor.swift */; };
+		26BA2DC82453D40600CE0CB1 /* ViewControllerQr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA2DC72453D40600CE0CB1 /* ViewControllerQr.swift */; };
 		26EEE3E7244677DB009FA9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEE3E6244677DB009FA9E4 /* AppDelegate.swift */; };
 		26EEE3E9244677DB009FA9E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEE3E8244677DB009FA9E4 /* SceneDelegate.swift */; };
 		26EEE3EB244677DB009FA9E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEE3EA244677DB009FA9E4 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		262EFCED2451DE7200D24FAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		268740BE2451719400D9AB38 /* ViewControllerMedir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMedir.swift; sourceTree = "<group>"; };
 		268740C024519F2400D9AB38 /* Medicion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010Medicion.swift"; sourceTree = "<group>"; };
+		26BA2DC52453BD9F00CE0CB1 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		26BA2DC72453D40600CE0CB1 /* ViewControllerQr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQr.swift; sourceTree = "<group>"; };
 		26EEE3E3244677DB009FA9E4 /* proyectoFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26EEE3E6244677DB009FA9E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26EEE3E8244677DB009FA9E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,12 +98,14 @@
 				BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */,
 				BD7A52682450E24D0040392B /* InicioViewController.swift */,
 				BD7A52642450B81E0040392B /* Paciente.swift */,
+				26BA2DC52453BD9F00CE0CB1 /* Doctor.swift */,
 				26EEE3EF244677DD009FA9E4 /* Assets.xcassets */,
 				26EEE3F1244677DD009FA9E4 /* LaunchScreen.storyboard */,
 				26EEE3F4244677DD009FA9E4 /* Info.plist */,
 				26EEE3FA24467AC0009FA9E4 /* todo.rtf */,
 				268740BE2451719400D9AB38 /* ViewControllerMedir.swift */,
 				268740C024519F2400D9AB38 /* Medicion.swift */,
+				26BA2DC72453D40600CE0CB1 /* ViewControllerQr.swift */,
 			);
 			path = proyectoFinal;
 			sourceTree = "<group>";
@@ -240,12 +246,14 @@
 			files = (
 				BD7A526D245105820040392B /* MainViewController.swift in Sources */,
 				26EEE3EB244677DB009FA9E4 /* ViewController.swift in Sources */,
+				26BA2DC62453BD9F00CE0CB1 /* Doctor.swift in Sources */,
 				BD7A526F245137EB0040392B /* EditarPerfilViewController.swift in Sources */,
 				26EEE3E7244677DB009FA9E4 /* AppDelegate.swift in Sources */,
 				BD7A527124513D740040392B /* TabBarViewController.swift in Sources */,
 				268740C124519F2400D9AB38 /* Medicion.swift in Sources */,
 				BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */,
 				BD7A52652450B81E0040392B /* Paciente.swift in Sources */,
+				26BA2DC82453D40600CE0CB1 /* ViewControllerQr.swift in Sources */,
 				BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */,
 				268740BF2451719400D9AB38 /* ViewControllerMedir.swift in Sources */,
 				26EEE3E9244677DB009FA9E4 /* SceneDelegate.swift in Sources */,

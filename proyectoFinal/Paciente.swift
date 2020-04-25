@@ -19,9 +19,10 @@ class Paciente: NSObject {
     var Mediciones : [Medicion] = []
     var telefono : Int
     var correo : String
+    var doctor : Doctor
     //var Medicinas = [String]()
     
-    init(id:String,Nombre:String,Peso:Float,Altura:Float,Edad:Int,circAb:Float,telefono:Int,correo:String){
+    init(id:String,Nombre:String,Peso:Float,Altura:Float,Edad:Int,circAb:Float,telefono:Int,correo:String,doctor:Doctor){
         self.id = id
         self.Nombre = Nombre
         self.Peso = Peso
@@ -30,9 +31,14 @@ class Paciente: NSObject {
         self.circAb = circAb
         self.telefono = telefono
         self.correo = correo
+        self.doctor = doctor
         /*for Medicinas in Medicinas{
             self.Medicinas.append(Medicinas)
         }*/
+    }
+    
+    func cambiarDoctor(docX:Doctor){
+        self.doctor = docX
     }
     
     func agregarMedicion(sis:[Int],dia:[Int],fc:[Int],siguioMedicamentos:Bool){
@@ -60,8 +66,7 @@ class Paciente: NSObject {
                 self.id = ref!.documentID
                 let defaults = UserDefaults.standard
                 defaults.set(self.id,forKey: defaultsKeys.keyOne)
-                print(self.id)
-                self.agregarId()
+                print("Document successfully written!")
             }
         }
         
@@ -71,7 +76,7 @@ class Paciente: NSObject {
     func agregarId(){
         
         var idX : String
-        
+
         let defaults = UserDefaults.standard
         if let stringOne = defaults.string(forKey: defaultsKeys.keyOne) {
             print(stringOne) // Some String Value
@@ -85,14 +90,23 @@ class Paciente: NSObject {
                 } else {
                     self.id = idX
                     print(self.id)
-                    self.agregarMediciones()
+                    self.agregarMedicionesDummy()
                 }
             }
         }
-        
     }
     
-    func agregarMediciones(){
+    func actualizarPaciente(Nombre:String,Peso:Float,Altura:Float,Edad:Int,circAb:Float,telefono:Int,correo:String){
+        self.Nombre = Nombre
+        self.Peso = Peso
+        self.Altura = Altura
+        self.Edad = Edad
+        self.circAb = circAb
+        self.telefono = telefono
+        self.correo = correo
+    }
+    
+    func agregarMedicionesDummy(){
         var idX:String
         let defaults = UserDefaults.standard
         if let stringOne = defaults.string(forKey: defaultsKeys.keyOne) {
