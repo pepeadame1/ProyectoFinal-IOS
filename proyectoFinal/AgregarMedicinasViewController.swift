@@ -23,6 +23,8 @@ class AgregarMedicinasViewController: UIViewController,UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     @IBAction func agregarMedicina(_ sender: Any) {

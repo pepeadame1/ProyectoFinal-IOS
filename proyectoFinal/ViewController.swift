@@ -145,8 +145,10 @@ class ViewController: UIViewController, ContainerToMaster {
             let medicion = Medicion(sis: med1,dia: med2,fc: med3, siguioMedicamentos: true)
             medicion.mandarMedicion()
             
-            //TODO: cerrer
+            //TODO: cerrar
             print("cerrar vista")
+            dismiss(animated: true, completion: nil)
+            
         default:
             //lbCounter.text = "ERROR"
             print("no")

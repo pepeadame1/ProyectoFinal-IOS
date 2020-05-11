@@ -45,7 +45,6 @@ class Medicion: NSObject {
             print(stringOne) // Some String Value
             idX = stringOne
             let db = Firestore.firestore()
-            
             db.collection("users").document(idX).collection("Mediciones").addDocument(data: [
                 "sis" : sis,
                 "dia" : dia,

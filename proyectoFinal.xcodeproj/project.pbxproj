@@ -20,6 +20,7 @@
 		26EEE3F0244677DD009FA9E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26EEE3EF244677DD009FA9E4 /* Assets.xcassets */; };
 		26EEE3F3244677DD009FA9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26EEE3F1244677DD009FA9E4 /* LaunchScreen.storyboard */; };
 		26EEE3FB24467AC0009FA9E4 /* todo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 26EEE3FA24467AC0009FA9E4 /* todo.rtf */; };
+		BD5ABC4A2467799800D30A8A /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5ABC492467799800D30A8A /* HistorialViewController.swift */; };
 		BD7A52652450B81E0040392B /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A52642450B81E0040392B /* Paciente.swift */; };
 		BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A52682450E24D0040392B /* InicioViewController.swift */; };
 		BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */; };
@@ -45,6 +46,7 @@
 		26EEE3F4244677DD009FA9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26EEE3FA24467AC0009FA9E4 /* todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = todo.rtf; sourceTree = "<group>"; };
 		9503F03800A8E1F32DA8C3B6 /* Pods_proyectoFinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_proyectoFinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD5ABC492467799800D30A8A /* HistorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		BD7A52642450B81E0040392B /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 		BD7A52682450E24D0040392B /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarMedicinasViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				26EEE3E8244677DB009FA9E4 /* SceneDelegate.swift */,
 				26EEE3EA244677DB009FA9E4 /* ViewController.swift */,
 				26EEE3EC244677DB009FA9E4 /* Main.storyboard */,
+				BD5ABC492467799800D30A8A /* HistorialViewController.swift */,
 				BD7A527024513D740040392B /* TabBarViewController.swift */,
 				BD7A526E245137EB0040392B /* EditarPerfilViewController.swift */,
 				BD7A526C245105820040392B /* MainViewController.swift */,
@@ -250,6 +253,7 @@
 				BD7A526F245137EB0040392B /* EditarPerfilViewController.swift in Sources */,
 				26EEE3E7244677DB009FA9E4 /* AppDelegate.swift in Sources */,
 				BD7A527124513D740040392B /* TabBarViewController.swift in Sources */,
+				BD5ABC4A2467799800D30A8A /* HistorialViewController.swift in Sources */,
 				268740C124519F2400D9AB38 /* Medicion.swift in Sources */,
 				BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */,
 				BD7A52652450B81E0040392B /* Paciente.swift in Sources */,
