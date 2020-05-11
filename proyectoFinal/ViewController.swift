@@ -129,6 +129,9 @@ class ViewController: UIViewController, ContainerToMaster {
         })
                
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(self.temp2),execute: work!)
+        if stateMachine == 9 {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     
