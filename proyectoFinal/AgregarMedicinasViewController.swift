@@ -17,7 +17,7 @@ class AgregarMedicinasViewController: UIViewController,UITextFieldDelegate{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tfAgregarMedicina: UITextField!
     
-    var medicinas : [String] = ["motrin","diclofenaco"]
+    var medicinas : [String] = []
     var pacientes = [Paciente]()
     
     override func viewDidLoad() {
@@ -59,6 +59,20 @@ extension AgregarMedicinasViewController:UITableViewDelegate,UITableViewDataSour
         cell.medicina.text = medicinas[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            medicinas.remove(at: indexPath.row)
+            
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
     }
     
     

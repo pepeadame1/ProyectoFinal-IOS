@@ -36,8 +36,8 @@ class InicioViewController: UIViewController{
             let userRef = db.collection("users").document(stringOne)
             userRef.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    //let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                    //print("Document data: \(dataDescription)")
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    print("Document data: \(dataDescription)")
                     let dummyDoctor = Doctor(nombre:"test",telefono: 0,email:"no",id:"test")
                     
                     let id = document["id"]! as! String

@@ -67,14 +67,15 @@ class Paciente: NSObject {
                 let defaults = UserDefaults.standard
                 defaults.set(self.id,forKey: defaultsKeys.keyOne)
                 print("Document successfully written!")
+                self.agregarId()
             }
         }
+        
         
         
     }
     
     func agregarId(){
-        
         var idX : String
 
         let defaults = UserDefaults.standard
@@ -90,7 +91,6 @@ class Paciente: NSObject {
                 } else {
                     self.id = idX
                     print(self.id)
-                    self.agregarMedicionesDummy()
                 }
             }
         }
