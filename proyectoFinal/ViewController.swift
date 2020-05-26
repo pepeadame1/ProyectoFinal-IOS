@@ -103,7 +103,7 @@ class ViewController: UIViewController, ContainerToMaster {
     }
 
     func terminaReloj(){
-        lbCounter.text = "ahora tome las mediciones"
+        lbCounter.text = "Ahora tome las mediciones"
         stateMachine += 1
         animateIn()
     }
@@ -111,7 +111,7 @@ class ViewController: UIViewController, ContainerToMaster {
     func fun1(){
         self.stateMachine += 1
         timer(timeX: self.temp1)
-        lbCounter.text = "porfavor mantengase quieto por 5 minutos"
+        lbCounter.text = "Porfavor mantengase quieto por 5 minutos"
         
         work = DispatchWorkItem(block: {
             self.terminaReloj()
