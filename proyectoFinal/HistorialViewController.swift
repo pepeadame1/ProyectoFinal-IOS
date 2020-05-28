@@ -2,7 +2,7 @@
 //  HistorialViewController.swift
 //  proyectoFinal
 //
-//  Created by Vanessa Rubio on 09/05/20.
+//  Created by Julio Rubio on 09/05/20.
 //  Copyright © 2020 Jose Roberto. All rights reserved.
 //
 
