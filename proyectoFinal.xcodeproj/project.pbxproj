@@ -23,6 +23,7 @@
 		BD5ABC4A2467799800D30A8A /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5ABC492467799800D30A8A /* HistorialViewController.swift */; };
 		BD725DBB247DD4C2006CA627 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD725DBA247DD4C2006CA627 /* LogInViewController.swift */; };
 		BD725DBD247DD4D8006CA627 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD725DBC247DD4D8006CA627 /* SignUpViewController.swift */; };
+		BD725DBF247ECE0F006CA627 /* SeguimientoPresionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD725DBE247ECE0E006CA627 /* SeguimientoPresionViewController.swift */; };
 		BD7A52652450B81E0040392B /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A52642450B81E0040392B /* Paciente.swift */; };
 		BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A52682450E24D0040392B /* InicioViewController.swift */; };
 		BD7A526B2450E8D00040392B /* AgregarMedicinasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */; };
@@ -51,6 +52,8 @@
 		BD5ABC492467799800D30A8A /* HistorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		BD725DBA247DD4C2006CA627 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		BD725DBC247DD4D8006CA627 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BD725DBE247ECE0E006CA627 /* SeguimientoPresionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguimientoPresionViewController.swift; sourceTree = "<group>"; };
+		BD725DC0247F0BEE006CA627 /* proyectoFinal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = proyectoFinal.entitlements; sourceTree = "<group>"; };
 		BD7A52642450B81E0040392B /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 		BD7A52682450E24D0040392B /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
 		BD7A526A2450E8D00040392B /* AgregarMedicinasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarMedicinasViewController.swift; sourceTree = "<group>"; };
@@ -93,11 +96,13 @@
 		26EEE3E5244677DB009FA9E4 /* proyectoFinal */ = {
 			isa = PBXGroup;
 			children = (
+				BD725DC0247F0BEE006CA627 /* proyectoFinal.entitlements */,
 				262EFCED2451DE7200D24FAD /* GoogleService-Info.plist */,
 				26EEE3E6244677DB009FA9E4 /* AppDelegate.swift */,
 				26EEE3E8244677DB009FA9E4 /* SceneDelegate.swift */,
 				26EEE3EA244677DB009FA9E4 /* ViewController.swift */,
 				26EEE3EC244677DB009FA9E4 /* Main.storyboard */,
+				BD725DBE247ECE0E006CA627 /* SeguimientoPresionViewController.swift */,
 				BD725DBC247DD4D8006CA627 /* SignUpViewController.swift */,
 				BD725DBA247DD4C2006CA627 /* LogInViewController.swift */,
 				BD5ABC492467799800D30A8A /* HistorialViewController.swift */,
@@ -269,6 +274,7 @@
 				BD7A52692450E24D0040392B /* InicioViewController.swift in Sources */,
 				268740BF2451719400D9AB38 /* ViewControllerMedir.swift in Sources */,
 				26EEE3E9244677DB009FA9E4 /* SceneDelegate.swift in Sources */,
+				BD725DBF247ECE0F006CA627 /* SeguimientoPresionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +419,7 @@
 			baseConfigurationReference = E5192B444B60685B1F948114 /* Pods-proyectoFinal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = proyectoFinal/proyectoFinal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = proyectoFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -423,7 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ITESM.proyectoFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -432,6 +439,7 @@
 			baseConfigurationReference = 1C098B3F1B93ACF0D86A7185 /* Pods-proyectoFinal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = proyectoFinal/proyectoFinal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = proyectoFinal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -442,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ITESM.proyectoFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

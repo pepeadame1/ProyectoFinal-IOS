@@ -20,8 +20,8 @@ class ViewController: UIViewController, ContainerToMaster {
     
     var stateMachine = 0
     var skip = false
-    var temp1 = 30
-    var temp2 = 12
+    var temp1 = 300
+    var temp2 = 120
     
     var med1:[Int] = []
     var med2:[Int] = []
@@ -123,7 +123,7 @@ class ViewController: UIViewController, ContainerToMaster {
     func fun2(){
         self.stateMachine += 1
         timer(timeX: self.temp2)
-        lbCounter.text = "porfavor mantengase quieto por 3 minutos"
+        lbCounter.text = "porfavor mantengase quieto por 2 minutos"
         work = DispatchWorkItem(block: {
             self.terminaReloj()
         })

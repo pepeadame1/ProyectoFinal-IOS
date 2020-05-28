@@ -19,10 +19,11 @@ class Paciente: NSObject {
     var Mediciones : [Medicion] = []
     var telefono : Int
     var correo : String
+    var password:String
     var doctor : Doctor
     //var Medicinas = [String]()
     
-    init(id:String,Nombre:String,Peso:Float,Altura:Float,Edad:Int,circAb:Float,telefono:Int,correo:String,doctor:Doctor){
+    init(id:String,Nombre:String,Peso:Float,Altura:Float,Edad:Int,circAb:Float,telefono:Int,correo:String,password:String,doctor:Doctor){
         self.id = id
         self.Nombre = Nombre
         self.Peso = Peso
@@ -31,6 +32,7 @@ class Paciente: NSObject {
         self.circAb = circAb
         self.telefono = telefono
         self.correo = correo
+        self.password = password
         self.doctor = doctor
         /*for Medicinas in Medicinas{
             self.Medicinas.append(Medicinas)
@@ -58,7 +60,8 @@ class Paciente: NSObject {
             "edad":Edad,
             "circAb":circAb,
             "telefono" : telefono,
-            "correo" : correo
+            "correo" : correo,
+            "password":password
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")

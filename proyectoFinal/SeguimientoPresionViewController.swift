@@ -1,34 +1,34 @@
 //
-//  InicioViewController.swift
+//  SeguimientoPresionViewController.swift
 //  proyectoFinal
 //
-//  Created by Julio Rubio on 22/04/20.
+//  Created by Julio Rubio on 27/05/20.
 //  Copyright © 2020 Jose Roberto. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class InicioViewController: UIViewController{
-    
-    @IBOutlet weak var tfNombre: UITextField!
-    @IBOutlet weak var tfPeso: UITextField!
-    @IBOutlet weak var tfAltura: UITextField!
-    @IBOutlet weak var tfEdad: UITextField!
-    @IBOutlet weak var tfCircAb: UITextField!
+struct defaultsKeys {
+    static let keyOne = "firstStringKey"
+    static let keyTwo = "secondStringKey"
+}
+
+class SeguimientoPresionViewController: UIViewController {
+    @IBOutlet weak var btnIngresar: UIButton!
+    @IBOutlet weak var btnCrearCuenta: UIButton!
     var loggedIn = false
     
-    var UserEmail:String!
-    var password:String!
-    
     var pacienteUsuario = [Paciente]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("main")
         let defaults = UserDefaults.standard
         if let stringOne = defaults.string(forKey: defaultsKeys.keyOne) {
             print(stringOne)
             let db = Firestore.firestore()
+            
             let userRef = db.collection("users").document(stringOne)
             userRef.getDocument { (document, error) in
                 if let document = document, document.exists {
@@ -56,26 +56,10 @@ class InicioViewController: UIViewController{
         }
         // Do any additional setup after loading the view.
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let bar = segue.destination as! TabBarViewController
-        bar.paciente = pacienteUsuario[0]
+        if segue.identifier == "loginSegue"{
+            let bar = segue.destination as! TabBarViewController
+            bar.paciente = pacienteUsuario[0]
+        }
     }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        
-        let dummyDoctor = Doctor(nombre:"test",telefono: 0,email:"no",id:"test")
-        
-        if tfNombre.text != "",let edad = Int(tfEdad.text!), let peso = Float(tfPeso.text!), let altura = Float(tfAltura.text!), let circAb = Float(tfCircAb.text!){
-            
-            let id = "testPaciente"
-            
-            let paciente = Paciente(id:id,Nombre: tfNombre.text!, Peso: peso, Altura: altura, Edad: edad, circAb: circAb,telefono: 666,correo:UserEmail,password: password,doctor: dummyDoctor)
-            paciente.agregarUsuario()
-            pacienteUsuario.append(paciente)
-                return true
-            }
-        return false
-    }
-    
 }

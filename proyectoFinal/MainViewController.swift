@@ -14,20 +14,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         let mainView = tabBarController as! TabBarViewController
         
-        print(String(describing: mainView.paciente.Peso))
-        print(String(describing: mainView.paciente.Altura))
-        print(String(describing: mainView.paciente.Edad))
-        print(String(describing: mainView.paciente.circAb))
-        
         self.definesPresentationContext = true
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let mainView = tabBarController as! TabBarViewController
-        print(String(describing: mainView.paciente.Peso))
-        print(String(describing: mainView.paciente.Altura))
-        print(String(describing: mainView.paciente.Edad))
-        print(String(describing: mainView.paciente.circAb))
     }
 }
