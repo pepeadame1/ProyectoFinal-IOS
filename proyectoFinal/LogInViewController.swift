@@ -29,7 +29,6 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("signin")
         // Do any additional setup after loading the view.
     }
     
@@ -43,16 +42,12 @@ class LogInViewController: UIViewController {
     
     @IBAction func validateUser(_ sender: Any) {
         if tfEmail.text != "", tfPass.text != ""{
-            print("text validated")
             let db = Firestore.firestore()
             _ = db.collection("users").whereField("correo", isEqualTo: self.tfEmail.text!).getDocuments{(querySnapshot,err) in
                 if err != nil{
-                    print("does not exist")
                 }
                 else{
                     for document in querySnapshot!.documents{
-                        print("\(document.data())")
-                        print("\(document.get("password") as! String)")
                         if self.tfPass.text == (document.get("password") as! String){
                             self.id = (document.get("id") as! String)
                             self.Nombre = (document["nombre"]! as! String)
@@ -67,11 +62,12 @@ class LogInViewController: UIViewController {
                             let dummyDoctor = Doctor(nombre:"test",telefono: 0,email:"no",id:"test")
                             let paciente = Paciente(id: self.id, Nombre: self.Nombre, Peso: self.Peso, Altura: self.Altura, Edad: self.Edad, circAb: self.circAb, telefono: self.telefono, correo: self.correo,password: self.contraseña, doctor: dummyDoctor)
                             self.pacienteUsuario.append(paciente)
-                            print("YAY?")
                             self.performSegue(withIdentifier: "loginSegue", sender: self)
                         }
                         else{
-                            print("NAY")
+                            let alerta = UIAlertController(title:"Error",message: "No pueden haber campos vacíos",preferredStyle: .alert)
+                            alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                            self.present(alerta,animated: true,completion: nil)
                         }
                     }
                 }

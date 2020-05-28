@@ -23,17 +23,14 @@ class SeguimientoPresionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("main")
         let defaults = UserDefaults.standard
         if let stringOne = defaults.string(forKey: defaultsKeys.keyOne) {
-            print(stringOne)
             let db = Firestore.firestore()
             
             let userRef = db.collection("users").document(stringOne)
             userRef.getDocument { (document, error) in
                 if let document = document, document.exists {
                     let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                    print("Document data: \(dataDescription)")
                     let dummyDoctor = Doctor(nombre:"test",telefono: 0,email:"no",id:"test")
                     
                     let id = document["id"]! as! String
@@ -49,9 +46,7 @@ class SeguimientoPresionViewController: UIViewController {
                     let paciente = Paciente(id: id, Nombre: Nombre, Peso: Peso, Altura: Altura, Edad: Edad, circAb: circAb, telefono: telefono, correo: correo,password: contra, doctor: dummyDoctor)
                     self.pacienteUsuario.append(paciente)
                     self.performSegue(withIdentifier: "loginSegue", sender: self)
-                } else {
-                    print("Document does not exist")
-                }
+                } 
             }
         }
         // Do any additional setup after loading the view.

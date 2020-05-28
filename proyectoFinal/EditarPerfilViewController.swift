@@ -33,13 +33,11 @@ class EditarPerfilViewController: UIViewController {
         user.getDocument{(document,error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print("Document data: \(dataDescription)")
                 self.tfEdad.text = String(document.get("edad") as! Int)
                 self.tfPeso.text = String(document.get("peso") as! Float)
                 self.tfAltura.text = String(document.get("altura") as! Float)
                 self.tfCirc.text = String(document.get("circAb") as! Float)
             } else {
-                print("Document does not exist")
             }
         }
     }
@@ -75,7 +73,9 @@ class EditarPerfilViewController: UIViewController {
             self.tabBarController?.selectedIndex = 0
         }
         else{
-            print("Algun Valor no es valido")
+            let alerta = UIAlertController(title:"Error",message: "Algun campo no es valido",preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alerta,animated: true,completion: nil)
         }
     }
     

@@ -48,14 +48,11 @@ class HistorialViewController: UIViewController {
         user.getDocument{(document,error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print("Document data: \(dataDescription)")
             } else {
-                print("Document does not exist")
             }
         }
         user.collection("Mediciones").getDocuments(){(query, err) in
             if let err = err{
-                print("Error")
             }else{
                 for document in query!.documents{
                     let sis = document.get("sis") as! NSArray
@@ -66,9 +63,7 @@ class HistorialViewController: UIViewController {
                         self.toma.append(dia[i] as! Int)
                         self.toma.append(fc[i] as! Int)
                     }
-                    print("TOMA")
                     self.tomas.append(self.toma)
-                    print(self.toma)
                     self.tableView.reloadData()
                     self.toma = []
                 }

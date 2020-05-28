@@ -33,14 +33,25 @@ class ViewControllerMedir: UIViewController {
     }
 
     @IBAction func btSiguiente(_ sender: Any) {
-        if isInt(string: tfSys.text!) && isInt(string: tfAst.text!) && isInt(string: tfFreqCard.text!){
-            let uno = Int(tfSys.text!)!
-            let dos = Int(tfAst.text!)!
-            let tres = Int(tfFreqCard.text!)!
-            tfSys.text = ""
-            tfAst.text = ""
-            tfFreqCard.text = ""
-            containerToMaster?.ingresarDatos(uno: uno, dos: dos, tres: tres)
+        if tfSys.text! != "", tfAst.text! != "",tfFreqCard.text! != ""{
+            if isInt(string: tfSys.text!) && isInt(string: tfAst.text!) && isInt(string: tfFreqCard.text!){
+                let uno = Int(tfSys.text!)!
+                let dos = Int(tfAst.text!)!
+                let tres = Int(tfFreqCard.text!)!
+                tfSys.text = ""
+                tfAst.text = ""
+                tfFreqCard.text = ""
+                containerToMaster?.ingresarDatos(uno: uno, dos: dos, tres: tres)
+            }else{
+                let alerta = UIAlertController(title:"Error",message: "Los valores tienes que ser numeros naturales",preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alerta,animated: true,completion: nil)
+            }
+        }
+        else{
+            let alerta = UIAlertController(title:"Error",message: "Los campos no pueden estar vacios",preferredStyle: .alert)
+            alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alerta,animated: true,completion: nil)
         }
         
     }

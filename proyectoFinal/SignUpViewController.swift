@@ -13,10 +13,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfContraseña: UITextField!
     @IBOutlet weak var tfConfirmacionContraseña: UITextField!
+    var flag:Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hi")
         // Do any additional setup after loading the view.
     }
     
@@ -27,13 +27,37 @@ class SignUpViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if tfContraseña.text != "",tfConfirmacionContraseña.text != "", tfEmail.text != "", tfConfirmacionContraseña.text == tfContraseña.text{
-            return true
+        if tfContraseña.text != "",tfConfirmacionContraseña.text != "", tfEmail.text != ""{
+            if tfConfirmacionContraseña.text == tfContraseña.text{
+                flag = isValidEmail(tfEmail.text!)
+                if flag{
+                    return true}
+                else{
+                    let alerta = UIAlertController(title:"Error",message: "El email no es valido",preferredStyle: .alert)
+                    alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    present(alerta,animated: true,completion: nil)
+                }
+            }
+            else{
+                let alerta = UIAlertController(title:"Error",message: "Las contraseñas deben de coincidir",preferredStyle: .alert)
+                alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alerta,animated: true,completion: nil)
+            }
         }
+        let alerta = UIAlertController(title:"Error",message: "No pueden haber campos vacíos",preferredStyle: .alert)
+        alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alerta,animated: true,completion: nil)
         return false
     }
     
     @IBAction func regresar(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
 }
