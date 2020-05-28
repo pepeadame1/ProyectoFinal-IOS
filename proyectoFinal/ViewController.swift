@@ -232,6 +232,12 @@ class ViewController: UIViewController, ContainerToMaster {
         print(med2)
         print(med3)
     }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return UIInterfaceOrientationMask.landscape
+    }
+    override var shouldAutorotate: Bool{
+        return false
+    }
     
 }
 

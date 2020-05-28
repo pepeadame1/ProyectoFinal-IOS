@@ -80,4 +80,7 @@ class LogInViewController: UIViewController {
         }
     }
     
+    @IBAction func regresar(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -47,4 +47,11 @@ class MainViewController: UIViewController {
             rotationAnimation.repeatCount = .infinity
             imageView.layer.add(rotationAnimation, forKey: nil)
     }
+    @IBAction func cerrarSesion(_ sender: Any) {
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
 }

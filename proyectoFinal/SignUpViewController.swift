@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("signup")
+        print("Hi")
         // Do any additional setup after loading the view.
     }
     
@@ -31,5 +31,9 @@ class SignUpViewController: UIViewController {
             return true
         }
         return false
+    }
+    
+    @IBAction func regresar(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

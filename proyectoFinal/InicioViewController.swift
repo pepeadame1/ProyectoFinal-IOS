@@ -78,4 +78,7 @@ class InicioViewController: UIViewController{
         return false
     }
     
+    @IBAction func regresar(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

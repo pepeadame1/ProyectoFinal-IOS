@@ -100,4 +100,5 @@ extension HistorialViewController:UITableViewDelegate,UITableViewDataSource{
         cell.lblFq3.text = String(tomas[indexPath.row][8])
         return cell
     }
+    
 }
